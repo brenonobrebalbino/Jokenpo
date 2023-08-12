@@ -1,10 +1,59 @@
-print('JOKENPO')
-jogador1 = input("Jogador1: ")
-jogador2 = input("Jogador2: ")
-texto = "pedra" < "papel" < "tesoura" < "pedra"
-if (jogador1 == jogador2):
- print("Empate!")
-elif (jogador1 < jogador2):
- print("Jogador 1 ganhou.")
-else:
- print("Jogador 2 ganhou.")
+#Importei uma biblioteca random (para ajudar com opções aleatorias com números aleatporios)
+from random import randint
+
+#Criei uma tipo lista com as alternativas que desejo combinar com a biblioteca random
+jokenpo = ('Pedra', 'Papel', 'Tesoura')
+
+#aqui o computador tem um range com três alternativas
+computador = randint(0,2)
+
+#Alternativas para jogada
+print('Escolha uma opção:')
+print('0 - Pedra')
+print('1 - Papel')
+print('2 - Tesoura')
+
+#Entrada de dados do jogador
+jogador = int(input("Escolha uma opção: "))
+print('')
+
+
+
+#Algoritimo do jogo
+#Computador jogou pedra
+if computador == 0:
+    if(jogador == 0):
+        print('Empate !')
+    elif(jogador == 1):
+        print('Você VENCEU !')
+    elif(jogador == 2):
+        print('Você PERDEU !')
+    else:
+        print('Escolha 0, 1 ou 2!')
+
+#Computador jogou papel
+elif computador == 1:
+    if(jogador == 0):
+        print('Você PERDEU !')
+    elif(jogador == 1):
+        print('EMPATE !')
+    elif(jogador == 2):
+        print('Você VENCEU!')
+    else:
+        print('Escolha 0, 1 ou 2!')
+
+#Computador jogou Tesoura
+if computador == 2:
+    if(jogador == 0):
+        print('Você VENCEU !')
+    elif(jogador == 1):
+        print('Você PERDEU !')
+    elif(jogador == 2):
+        print('EMPATE !')
+    else:
+        print('Escolha 0, 1 ou 2!')
+
+print('')
+#Mostrando as jogadas
+print(f'Computador jogou: {jokenpo[computador]}')
+print(f'Você jogou: {jokenpo[jogador]}')
