@@ -1,10 +1,10 @@
-#Importei uma biblioteca random (para ajudar com opções aleatorias com números aleatporios)
+#Importei uma biblioteca random (para ajudar com números aleatorios)
 from random import randint
 
-#Criei uma tipo lista com as alternativas que desejo combinar com a biblioteca random
+#Criei uma lista com as alternativas que desejo combinar com a biblioteca random
 jokenpo = ('Pedra', 'Papel', 'Tesoura')
 
-#aqui o computador tem um range com três alternativas
+#aqui o computador entra em um range de zero a dois (três alternativas)
 computador = randint(0,2)
 
 #Alternativas para jogada
@@ -16,8 +16,6 @@ print('2 - Tesoura')
 #Entrada de dados do jogador
 jogador = int(input("Escolha uma opção: "))
 print('')
-
-
 
 #Algoritimo do jogo
 #Computador jogou pedra
